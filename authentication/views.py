@@ -38,7 +38,9 @@ def signin(req):
         if user1 is not None:
             
             login(req,user1)
-            return render(req,"authentication/success.html")
+            fname=user1.username
+            messages.success(req,"Successfull")
+            return render(req,"authentication/success.html",{'fname':fname})
         else:
            
             messages.error(req,"Bad Credential")
