@@ -6,6 +6,16 @@
     <title>Sigin</title>
 </head>
 <body>
-    <h1>sigin</h1>
+    <h1>sigin Page login page</h1>
+
+    <form  method="post">
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type="text" name="userName" id="userName">
+        <label for="">password</label>
+        <input type="password" name="pass1" id="pass1">
+
+        <button type="submit">Login</button>
+    </form>
 </body>
 </html>

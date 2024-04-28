@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signout</title>
+    <title>signup</title>
 </head>
 <body>
-    <h1>Signup</h1>
+    <h1>Create Account</h1>
+    <form  method="post">
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type="text" name="userName" id="userName">
+        <label for="">password</label>
+        <input type="password" name="pass1" id="pass1">
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
