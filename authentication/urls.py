@@ -7,5 +7,6 @@ urlpatterns = [
     path('signin/',views.signin,name="signin"),
     path('signup/',views.signup,name="signup"),
     path('success/',views.successLogin,name="success"),
+    path('activate/<uidb64>/<token>/',views.activate,name="activate"),
     
 ]

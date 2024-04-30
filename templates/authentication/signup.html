@@ -7,13 +7,25 @@
 </head>
 <body>
     
+    {% for message in messages %}
+    <div>
+      <p>Message : {{message}}</p>
+    </div>
+    {% endfor %}
+    
     <h1>Create Account</h1>
     <form  method="post">
         {% csrf_token %}
+        <label for="">FirstName</label>
+        <input type="text" name="fname" id="fname">
+        <label for="">LastName</label>
+        <input type="text" name="lname" id="lname">
         <label for="">Username</label>
         <input type="text" name="userName" id="userName">
         <label for="">password</label>
         <input type="password" name="pass1" id="pass1">
+        <label for="">Email</label>
+        <input type="email" name="email" id="email">
 
         <button type="submit">Submit</button>
     </form>

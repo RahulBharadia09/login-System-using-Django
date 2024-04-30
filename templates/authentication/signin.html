@@ -7,6 +7,12 @@
 </head>
 <body>
     <h1>sigin Page login page</h1>
+    {% for message in messages %}
+    <div>
+      <p>Message : {{message}}</p>
+    </div>
+    {% endfor %}
+    
 
     <form  method="post">
         {% csrf_token %}
